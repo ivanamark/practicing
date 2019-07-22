@@ -1,26 +1,14 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0%;
   font-family: sans-serif;
   background-image:url("https://www.w3schools.com/cssref/img_tree.gif");
   display: block;
   font-family: 'Helvetica Neue', 'Helvetica';
   color: #555;
 }
-label{
-  width:11%;
-  display: block;
-  margin:0 auto;
-  padding: 3%;
-  background-color: beige;
-}
-button {
-  background-color:#993399;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+
+.row{
+  width:50%;
+  
 }

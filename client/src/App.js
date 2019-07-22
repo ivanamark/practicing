@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import axios from 'axios';
 import './App.css';
 import { saveAs } from 'file-saver';
-
+import {Header} from './partials/header';
 class App extends Component {
   state={
     name:'',
@@ -23,21 +23,54 @@ class App extends Component {
   }
   render() {
     return (
-
+      <Fragment>
+<Header  />
       <div className="App">
-        <label><p>Name</p>
+      <div class="row">
+    <form class="col s12">
+      <div class="row">
+      
+        <div class="input-field col s12">
+        <div class="card-panel green lighten-1">
+        First Name
         <input type="text" placeholder="Name" name="name" onChange={this.handleChange}/>
-        </label>
-        <label><p>Receipt ID</p>
-        <input type="number" placeholder="Receipt ID" name="receiptId" onChange={this.handleChange}/></label>
-        <label><p>Price1</p>
-        <input type="number" placeholder="Price 1" name="price1" onChange={this.handleChange}/></label>
-        <label><p>Price2</p>
-        <input type="number" placeholder="Price 2" name="price2" onChange={this.handleChange}/></label>
-        <label>
-        <button onClick={this.createAndDownloadPdf}>Download PDF
-        </button></label>
-      </div>
+        </div>
+        
+        
+        <div class="card-panel green lighten-1">
+        Receipt ID
+        <input type="number" placeholder="Receipt ID" name="receiptId" onChange={this.handleChange}/>
+        </div>
+        
+        
+        
+        <div class="card-panel green lighten-1">
+        Price 1
+        <input type="number" placeholder="Price 1" name="price1" onChange={this.handleChange}/>
+        </div>
+        
+        
+        <div class="card-panel green lighten-1">
+        Price2
+        <input  type="number" placeholder="Price 2" name="price2" onChange={this.handleChange}/>
+        </div>
+        </div>
+        </div>
+        
+        
+      
+    </form>
+    <button class="btn teal accent-4 btn-small" onClick={this.createAndDownloadPdf}>
+        <i class="material-icons right">send</i>Download PDF</button>
+    </div>
+    
+    
+  
+        
+        
+        </div>
+      </Fragment>
+
     );
   }
 }
