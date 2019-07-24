@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import { saveAs } from 'file-saver';
 import {Header} from './partials/header';
+import Footer from './partials/footer';
+
 class App extends Component {
   state={
     name:'',
@@ -25,32 +27,33 @@ class App extends Component {
     return (
       <Fragment>
 <Header  />
+<main>
       <div className="App">
       <div class="row">
     <form class="col s12">
       <div class="row">
       
         <div class="input-field col s12">
-        <div class="card-panel green lighten-1">
+        <div class="card-panel pink accent-1">
         First Name
         <input type="text" placeholder="Name" name="name" onChange={this.handleChange}/>
         </div>
         
         
-        <div class="card-panel green lighten-1">
+        <div class="card-panel pink accent-1">
         Receipt ID
         <input type="number" placeholder="Receipt ID" name="receiptId" onChange={this.handleChange}/>
         </div>
         
         
         
-        <div class="card-panel green lighten-1">
+        <div class="card-panel pink accent-1">
         Price 1
         <input type="number" placeholder="Price 1" name="price1" onChange={this.handleChange}/>
         </div>
         
         
-        <div class="card-panel green lighten-1">
+        <div class="card-panel pink accent-1">
         Price2
         <input  type="number" placeholder="Price 2" name="price2" onChange={this.handleChange}/>
         </div>
@@ -69,9 +72,13 @@ class App extends Component {
         
         
         </div>
+        </main>
+        <Footer />
       </Fragment>
+      
 
     );
+    
   }
 }
 

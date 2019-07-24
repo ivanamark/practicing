@@ -6,9 +6,21 @@ body {
   display: block;
   font-family: 'Helvetica Neue', 'Helvetica';
   color: #555;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .row{
   width:50%;
   
+}
+
+
+body {
+  
+}
+
+main {
+  flex: 1 0 auto;
 }
